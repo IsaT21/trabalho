@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+        /* Estilo para o formulário */
+        body {
+            background-color: black; 
+            font-family: gothic, 'Arial Narrow', Arial, sans-serif, sans-serif;
+        }
+
+        .header { 
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            
+    
+        }
+
+        .canto {
+           position: fixed;
+           top: 0;
+           left: 0;
+        }
+
+        .canto2 {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+            
+        }
+
+        /*menu*/
+        nav ul {
+           list-style: none;
+           padding: 0;
+        }
+
+        nav li {
+           display: inline;
+           margin-right: 20px;
+        }
+
+        nav a {
+           text-decoration: underline;
+           color: white;
+           font-size: 20px;
+        }
+        
+        nav a:hover {
+    background-color: #ff2222; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 2px auto;
+            background-color: #440606; 
+            padding: 100px;
+            border-radius:20px;
+            box-shadow: 10 10px 20px rgba(0, 0, 0, 0,1);
+            
+           
+        }
+
+    
+        form::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to right, transparent 0%, #440606 40%, transparent 100%);
+            
+           
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            color: #fffefe; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 95%;
+            padding: 20px;
+            border: 2px solid #ddd; 
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #bd0000; 
+            color: white;
+            border: none;
+            padding: 20px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    border: 1px solid #ff0000; 
+}
+
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="header">
+        <h1>𝕯𝖊𝖎𝖝𝖊 𝖘𝖚𝖆 𝖒𝖊𝖓𝖘𝖆𝖌𝖊𝖒!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ℑ𝔫í𝔠𝔦𝔬</a></li>
+                <li><a href="sobremim.html">𝔖𝔬𝔟𝔯𝔢 𝔐𝔦𝔪</a></li>
+                <li><a href="formacao.html">𝔉𝔬𝔯𝔪𝔞çã𝔬</a></li>
+                <li><a href="portifolio.html">𝔓𝔬𝔯𝔱𝔦𝔣ó𝔩𝔦𝔬</a></li>
+                <li><a href="contato.html">ℭ𝔬𝔫𝔱𝔞𝔱𝔬</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+    <form action="" id="meuFormulario"> 
+        <label for="usuario">𝔑𝔬𝔪𝔢:
+            <input type="text" id="nome" placeholder="Digite seu nome...">
+        </label>
+
+        <label for="email">𝔈-𝔪𝔞𝔦𝔩:
+            <input type="email" id="email" placeholder="Digite seu e-mail...">
+        </label>
+
+        <label for="mensagem">𝔐𝔢𝔫𝔰𝔞𝔤𝔢𝔪:</label>
+        <textarea id="mensagem" rows="5" cols="50"></textarea>
+
+        <input type="submit" value="𝔈𝔫𝔳𝔦𝔞𝔯">
+    </form>
+
+
+    <div class="canto">
+        <img src="css/imagens/Captura_de_tela_2024-08-31_154449-removebg-preview.png" alt="Minha Imagem">
+      </div>
+
+      <div class="canto2">
+        <img src="css/imagens/bruxa-removebg-preview.png" alt="">
+      </div>
+
+
+    <script>document.getElementById('meuFormulario').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Captura os valores dos campos do formulário
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const mensagem = document.getElementById('mensagem').value;
+
+        // Exibe os dados no console 
+        console.log('Nome:', nome);
+        console.log('Email:', email);
+        console.log('Mensagem:', mensagem);
+
+        // Mostrar uma mensagem ao usuário
+        alert('Dados enviados com sucesso!\nNome: ' + nome + '\nEmail: ' + email + '\nMensagem: ' + mensagem);
+    });
+</script>
+</body>
+</html>
